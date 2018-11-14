@@ -17,9 +17,26 @@ img {
 b {
   font-weight: bold;
 }
-.mob {
-  display: none !important;
+html {
+  font-size: 10px;
 }
-
+.headernav {
+  display: none;
+}
+.logoimg {
+  background: url('../img/logo.png');
+  background-size: 100%;
+  background-position: top left;
+  background-repeat: no-repeat;
+  width: 10rem;
+  height: 1.85rem;
+}
+.headerh1 {
+  background: #ededed;
+  .headerh1__h1 {
+    font-family: Roboto, Arrial, sans-serif;
+    font-size: 3rem;
+  }
+}
 @media(min-width:640px) {
 }
