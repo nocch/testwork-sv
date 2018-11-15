@@ -297,6 +297,31 @@ body {
   }
 }
 
+.scrollup {
+  display: block;
+  position:fixed;
+  background: $blueberry;
+  width: 60px;
+  height:60px;
+  border-radius: 60px;
+  left: 10px;
+  bottom: 5px;
+  box-shadow:0 0 2px 1px rgba(255,255,255,1);
+  .scrollup_arrow {
+      display: block;
+      background: url('../img/shape.png');
+      background-size: 15px;
+      background-position: top left;
+      background-repeat: no-repeat;
+      width: 15px;
+      height: 21px;
+      margin: 19px auto;
+  }
+}
+.scrollup:hover {
+  opacity: .5;
+}
+
   @media(min-width:640px) {
     .content {
       max-width: 1024px;
@@ -360,7 +385,6 @@ body {
         width: 100%;
         max-width: 1024px;
         margin: 0 auto;
-        padding-left:20px;
       }
     }
     .headernav {
@@ -603,6 +627,9 @@ body {
           z-index: 250;
         }
       }
+    }
+    .scrollup {
+    bottom: 90px;
     }
   }
 @media(min-width:1024px) {
