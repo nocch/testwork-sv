@@ -1,3 +1,4 @@
+$blueberry: #4c2887;
 * { 
   vertical-align: baseline;
   border: 0 none; 
@@ -96,6 +97,10 @@ body {
     font-size: 16px;
     line-height: 20px;
   }
+  .itemblock__p:hover {
+    color:$blueberry;
+      cursor:pointer;
+  }
   .itemblock__priceold {
     color: #999999;
     font-size: 16px;
@@ -126,6 +131,18 @@ body {
       width: 20px;
       height: 18px;
       margin: 10px auto;
+    }
+  }
+  .itemblock__cart__cartbutton:hover{
+    background: $blueberry;
+    .itemblock__cart__cartinner{
+      background: url('../img/cart-yellow.png');
+    }
+  }
+  .itemblock__cart__cartbutton:hover{
+    background: $blueberry;
+    .itemblock__cart__cartinner{
+      background: url('../img/cart-yellow.png');
     }
   }
   .itemblock__stars{
@@ -209,6 +226,22 @@ body {
     }
   }
 }
+.itemblock-done{
+  .itemblock__cart__cartbutton{
+    background: #ffc800;
+    .itemblock__cart__cartinner{
+      background: url('../img/tick-purple.png');
+      background-repeat: no-repeat;
+    }
+  }
+  .itemblock__cart__cartbutton:hover{
+    background: $blueberry;
+    .itemblock__cart__cartinner{
+      background: url('../img/tick-yellow.png');
+      background-repeat: no-repeat;
+    }
+  }  
+}
 .prefooter{
   display: block;
   width: 100%;
@@ -285,6 +318,13 @@ body {
       }
     }
     .logo{
+      .logo__area {
+        display: block;
+        width: 100%;
+        max-width: 1024px;
+        margin: 0 auto;
+        padding-left:20px;
+      }
       .logo__tel {
         display: inline-block;
         float: right;
@@ -296,6 +336,15 @@ body {
       .logo__logoimg {
         width: 140px;
         height: 26px;
+      }
+    }
+    .headerh1{
+      .headerh1__area {
+        display: block;
+        width: 100%;
+        max-width: 1024px;
+        margin: 0 auto;
+        padding-left:20px;
       }
     }
     .headernav {
@@ -338,24 +387,7 @@ body {
         }
         .headernav__wrap__gamb {
           display: block;
-          background: url('../img/tiles-violet.png');
-          background-size: 100%;
-          background-position: top left;
-          background-repeat: no-repeat;
-          width: 16px;
-          height: 16px;
-          position: absolute;
-          top:13px;
-          left:14px;
-           z-index: 200;
-          &hover{
-            opacity: .5;
-            cursor: pointer;
-          }
-        }
-        .headernav__wrap__litleblocks {
-          display: block;
-          background: url('../img/listing-violet.png');
+          background: url('../img/tiles-wihte.png');
           background-size: 100%;
           background-position: top left;
           background-repeat: no-repeat;
@@ -364,6 +396,23 @@ body {
           position: absolute;
           top:13px;
           left:49px;
+           z-index: 200;
+          &hover{
+            opacity: .5;
+            cursor: pointer;
+          }
+        }
+        .headernav__wrap__litleblocks {
+          display: block;
+          background: url('../img/listing-wihte.png');
+          background-size: 100%;
+          background-position: top left;
+          background-repeat: no-repeat;
+          width: 16px;
+          height: 16px;
+          position: absolute;
+          top:13px;
+          left:14px;
           z-index: 200;
           &hover{
             opacity: .5;
@@ -376,7 +425,7 @@ body {
           position: absolute;
           border: 1px solid #999999;
           border-radius: 5px;
-          background: #4c2887;
+          background: $blueberry;
           position:absolute;
           top:5px;
           left:5px;
@@ -388,25 +437,35 @@ body {
     .content-listing {
       .headernav__wrap{
         .headernav__wrap__gamb{
-          background: url('../img/tiles-white.png');
+          background: url('../img/tiles-violet.png');
         }
         .headernav__wrap__litleblocks {
-          background: url('../img/listing-violet.png');
+          background: url('../img/listing-white.png');
         }
       }
       .itemblock{
         .itemblock__mask{
           display: none;
         }
+        .itemblock__img {
+          display: block;
+          float: left;
+          max-width: 25%;
+          width: 25%;
+          margin:54px 17.5px 21px 18px;
+          a img{
+            margin: auto;
+          }
+        }
       }
     }
     .content-tiles {
       .headernav__wrap{
         .headernav__wrap__gamb{
-          background: url('../img/tiles-violet.png');
+          background: url('../img/tiles-white.png');
         }
         .headernav__wrap__litleblocks {
-          background: url('../img/listing-white.png');
+          background: url('../img/listing-violet.png');
         }
         .headernav__wrap__animsquare {
           left: 40px;
@@ -442,6 +501,9 @@ body {
           width: 80%;
           margin: 54px 17.5px 21px 18px;  
         }
+        .itemblock__cart {
+          margin-bottom: 20px;
+        }
       }
       .itemblock:hover{
         .itemblock__mask{
@@ -462,3 +524,24 @@ body {
       }
     }
   }
+@media(min-width:1024px) {
+  .logo{
+    .logo__area {
+      padding-left:0px;
+    }
+    .logo__logoimg {
+      margin: 20px 0;
+    }
+    .logo__tel {
+      margin: 19px 0px 19px 0;
+    }
+  }
+  .headerh1{
+    .headerh1__area {
+      padding-left:0px;
+    }
+    .headerh1__h1 {
+      font-size:40px;
+    }
+  }
+}
