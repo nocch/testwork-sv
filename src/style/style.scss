@@ -213,7 +213,7 @@ body {
   display: block;
   width: 100%;
   height: 50px;
-  background: #ccc;
+  background: #ededed;
 }
 .footer {
   display: block;
@@ -246,7 +246,36 @@ body {
 .headernav {
   display: none;
 }
+.greybordercontent {
+  display: none;
+}
   @media(min-width:640px) {
+    .content {
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+    .greybordercontent {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #ededed;
+    }
+    .whitebckgcontent {
+      display: block;
+      width: 90%;
+      max-width: 1024px;
+      height: 100%;
+      background: #fff;
+      margin: 0 auto;
+      &:after {
+        content: '';
+        clear: both;
+        display: block;
+        height: 0;
+        visibility: hidden;
+        z-index: 1;
+      }
+    }
     .logo{
       .logo__tel {
         display: inline-block;
@@ -264,7 +293,15 @@ body {
     .headernav {
       display: block;
       width: 100%;
-      height: 80px;
+      height: 90px;
+      &:after {
+        content: '';
+        clear: both;
+        display: block;
+        height: 0;
+        visibility: hidden;
+        z-index: 1;
+      }
       .headernav__text {
         display: inline-block;
         width: 30px;
@@ -289,7 +326,7 @@ body {
         display: block;
         height: 0;
         visibility: hidden;
-           z-index: 1;
+        z-index: 1;
         }
         .headernav__wrap__gamb {
           display: block;
@@ -362,6 +399,28 @@ body {
           left: 40px;
         }
       }
-      
+      .itemblock {
+        display: inline-block;
+        float: left;
+        width:21%;
+        border-collapse: collapse;
+        border-top: 1px solid #ededed;
+        border-right: 1px solid #ededed;
+        border-bottom: 1px solid #ededed;
+        &:nth-child(5n+5){
+          border-right: 0px;
+        }
+        .itemblock__img {
+          display: block;
+          float: left;
+          max-width: 100%;
+          width: 80%;
+          margin: 54px 17.5px 21px 18px;  
+        }
+      }
     }
   }
+  @media(min-width:1024px) {
+    .content {
+    }  
+}
