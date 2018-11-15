@@ -43,7 +43,7 @@ body {
   width: 100%;
   .logo__logoimg {
     display: inline-block;
-    background: url('../img/logo.png');
+    background: url('../img/logo.svg');
     background-size: 100%;
     background-position: top left;
     background-repeat: no-repeat;
@@ -247,7 +247,15 @@ body {
   display: none;
 }
 .greybordercontent {
-  display: none;
+  width: 100%;
+}
+.whitebckgcontent {
+  width: 100%;
+}
+.itemblock{
+  .itemblock__mask{
+    display: none;
+  }
 }
   @media(min-width:640px) {
     .content {
@@ -386,6 +394,11 @@ body {
           background: url('../img/listing-violet.png');
         }
       }
+      .itemblock{
+        .itemblock__mask{
+          display: none;
+        }
+      }
     }
     .content-tiles {
       .headernav__wrap{
@@ -407,8 +420,20 @@ body {
         border-top: 1px solid #ededed;
         border-right: 1px solid #ededed;
         border-bottom: 1px solid #ededed;
+        position: relative;
         &:nth-child(5n+5){
           border-right: 0px;
+        }
+        .itemblock__mask{
+          position: absolute;
+          box-shadow: 0 0 0 transparent;
+          display: block;
+          transition: all .2s ease;
+          border: 1px solid transparent;
+          bottom: 0;
+          left: 0;
+          right: 1px;
+          top: 0;
         }
         .itemblock__img {
           display: block;
@@ -418,9 +443,22 @@ body {
           margin: 54px 17.5px 21px 18px;  
         }
       }
+      .itemblock:hover{
+        .itemblock__mask{
+          display: block;
+          border: 1px solid #ededed;
+          box-shadow: 0 0 5px rgba(0,0,0,.1);
+          bottom: -5px;
+          left: -5px;
+          right: -5px;
+          top: -5px;
+          border: 10px solid #fff;
+          z-index: 150;
+        }
+        .itemblock__wrapper {
+          position: relative;
+          z-index: 250;
+        }
+      }
     }
   }
-  @media(min-width:1024px) {
-    .content {
-    }  
-}
