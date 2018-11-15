@@ -17,18 +17,28 @@
 	<link rel="stylesheet" href="--path--css/style.css?--version--">
 </head>
 <body>
-<div class="content">
+<div class="content content-listing">
   <div class="logo">
     <a href="/">
       <div class="logo__logoimg"></div>
     </a>
+    <div class="logo__tel">8 (800) 700-43-43</div>
   </div>
+  
   <div class="headerh1">
     <div class="headerh1__h1">
       Apple iPhone
     </div>
   </div>
   <div class="headernav">
+    <div class="headernav__wrap">
+      <div class="headernav__wrap__animsquare ">&nbsp;</div>
+      <div class="headernav__wrap__gamb btn1">&nbsp;</div>
+      <div class="headernav__wrap__litleblocks btn1">&nbsp;</div>
+    </div>
+    <div class="headernav__text">
+      Вид:
+    </div>
   </div>
   <div class="itemblock">
     <div class="itemblock__img">
@@ -178,6 +188,23 @@
     <div class="scrollup_circle"></div>
     <div class="scrollup_arrow"></div>
   </div>
+<script>
 
+function myFunction(){
+
+var btns = document.getElementsByClassName('btn1');
+var par = document.getElementsByClassName('content');
+btns[0].onclick = function() {
+   
+  par[0].classList.add("content-listing");
+  par[0].classList.remove("content-tiles");
+}
+btns[1].onclick = function() {
+  par[0].classList.add("content-tiles");
+  par[0].classList.remove("content-listing");
+}
+};
+myFunction();
+</script>
 </body>
 </html>
