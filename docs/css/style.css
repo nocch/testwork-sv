@@ -20,7 +20,8 @@ html {
 body {
   display: table;
   min-height: 100vh;
-  width: 100%; }
+  width: 100%;
+  height: 100vh; }
 
 .content {
   display: table-row;
